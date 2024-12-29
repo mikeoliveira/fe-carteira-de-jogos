@@ -1,5 +1,5 @@
 {
-  "name": "@fe-nx-angular-base/source",
+  "name": "@fe-carteira-de-jogos/source",
   "version": "0.0.0",
   "license": "MIT",
   "config": {
@@ -9,7 +9,8 @@
   },
   "scripts": {
     "prepare": "husky",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "postinstall": "git config core.editor cat"
   },
   "private": true,
   "dependencies": {
