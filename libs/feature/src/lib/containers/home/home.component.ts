@@ -43,6 +43,13 @@ export class HomeComponent {
       numero5: new FormControl(''),
       numero6: new FormControl(''),
     }); 
+
+    this.dataManagerService.getDataObservable().subscribe(
+      (data) => {
+        if(data)
+        this.arrayNumeros = data;
+      }
+    );
   }
 
   numero = new FormControl('');
@@ -51,6 +58,12 @@ export class HomeComponent {
   onSubmit() { 
     if (this.verificarNumerosDiferentes() && this.verificarNumerosMenoresQue61()) {
       let contador = this.count++;
+      console.log(this.arrayNumeros)
+      if(this.arrayNumeros && this.arrayNumeros.length !== 0) {
+        contador = this.arrayNumeros.length;
+        console.log('contador', contador);	
+        contador = ++contador;
+      }
       this.arrayNumeros.push({id: contador ,jogo: contador, numeros: this.obterNumerosOrdenados(), numeros_acertos: 0});
       this.dataManagerService.setData(this.arrayNumeros);
       this.jogoForm.reset();
@@ -124,7 +137,7 @@ export class HomeComponent {
 
   adicionar(numeroJogo: any) {
     this.arrayNumeros.push({id: this.count++ ,jogo: numeroJogo, numero: this.numero.value, numeros_acertos: 0});
-    this.numero.setValue('');
+    this.jogoForm.reset();
   }
 
   criarJogos() {
