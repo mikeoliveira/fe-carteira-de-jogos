@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@fe-carteira-de-jogos/feature": ["libs/feature/src/index.ts"],
+      "@fe-carteira-de-jogos/infrastructure": [
+        "libs/infrastructure/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

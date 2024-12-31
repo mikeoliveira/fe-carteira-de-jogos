@@ -1,0 +1,12 @@
+@for (jogo of arrayNumeros$ | async; track $index; let iJogo = $index) {
+<h4>Jogo {{ jogo.jogo }}</h4>
+<div>
+  <mat-chip-set>
+    @if (jogo.jogo == iJogo + 1) {
+    @for (item of jogo.numeros; track $index) {
+    <mat-chip>{{ item }} </mat-chip>
+    } }
+  </mat-chip-set>
+  <span>contator de acertos: {{ jogo.numeros_acertos }}</span>
+</div>
+}

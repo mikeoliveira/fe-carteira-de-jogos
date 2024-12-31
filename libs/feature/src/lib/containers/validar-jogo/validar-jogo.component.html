@@ -1,0 +1,23 @@
+<form class="example-form" [formGroup]="validaJogoForm" (ngSubmit)="onSubmitvalidador()">
+    <div class="form-label">
+      <label>Digite os números sorteados</label>
+    </div>
+    <div class="group-two-digits">
+        @for (controlName of getControlNames(); track $index) {
+        <mat-form-field class="two-digits">
+          <input
+            [formControlName]="controlName"
+            [id]="controlName"
+            class="example-input"
+            matInput
+            placeholder="Ex.5"
+          />
+        </mat-form-field>
+        }
+    </div>
+    <div class="actions-button">
+        <button mat-raised-button type="submit">Validar Jogo</button>
+    </div>
+  </form>
+  
+<lib-lista-jogos></lib-lista-jogos>

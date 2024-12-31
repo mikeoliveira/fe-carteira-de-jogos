@@ -1,0 +1,32 @@
+/* Navbar container */
+.navbar {
+    width: 100%;
+    background-color: #001f3f; /* Azul escuro */
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+    color: #ffffff; /* Branco */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect on links */
+  .navbar a:hover {
+    background-color: #ffffff; /* Branco */
+    color: #001f3f; /* Azul escuro */
+    border-radius: 4px; /* Opcional, para suavizar os cantos */
+  }
