@@ -8,6 +8,8 @@
     }
   },
   "scripts": {
+    "nx": "nx",
+    "build:app-angular-monorepo": "nx build app-angular-monorepo",
     "prepare": "husky",
     "commit": "git-cz",
     "postinstall": "git config core.editor cat",
