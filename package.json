@@ -10,7 +10,9 @@
   "scripts": {
     "prepare": "husky",
     "commit": "git-cz",
-    "postinstall": "git config core.editor cat"
+    "postinstall": "git config core.editor cat",
+    "build:all": "npm run build:app-angular-monorepo"
+
   },
   "private": true,
   "dependencies": {
